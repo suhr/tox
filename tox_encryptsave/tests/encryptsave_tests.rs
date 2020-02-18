@@ -1,8 +1,5 @@
-use crate::toxencryptsave::*;
-use crate::toxcore::crypto_core::*;
-
-
-// is_encrypted()
+use tox_encryptsave::*;
+use tox_core::toxcore::crypto_core::*;
 
 #[test]
 fn is_encrypted_test() {
@@ -12,8 +9,6 @@ fn is_encrypted_test() {
     assert!(is_encrypted(include_bytes!("ciphertext")));
 }
 
-
-// pass_encrypt()
 
 #[test]
 fn pass_encrypt_error_test() {
@@ -40,9 +35,6 @@ fn pass_encrypt_test() {
     let encrypted2 = pass_encrypt(&plaintext, &passphrase).unwrap();
     assert_ne!(encrypted, encrypted2);
 }
-
-
-// pass_decrypt()
 
 #[test]
 fn pass_decrypt_error_null_test() {
