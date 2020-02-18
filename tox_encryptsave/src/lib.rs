@@ -43,7 +43,7 @@ pub use sodiumoxide::crypto::pwhash::SALTBYTES as SALT_LENGTH;
 /// Length in bytes of the key used to encrypt/decrypt data.
 pub use sodiumoxide::crypto::box_::PRECOMPUTEDKEYBYTES as KEY_LENGTH;
 
-use tox_core::toxcore::crypto_core;
+use tox_core::crypto_core;
 
 
 /// Length (in bytes) of [`MAGIC_NUMBER`](./constant.MAGIC_NUMBER.html).

@@ -1,5 +1,5 @@
-use tox::toxcore::binary_io::*;
-use tox::toxcore::state_format::old::*;
+use tox_core::binary_io::*;
+use tox_core::state_format::old::*;
 
 /*
 Load bytes of a real™ profile, de-serialize it and serialize again. Serialized
