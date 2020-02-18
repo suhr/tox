@@ -6,7 +6,7 @@ between two people using temporary [`Session`](./struct.Session.html)s.
 # Example
 
 ```no_run
-use tox::toxcore::tcp::secure::*;
+use tox_core::tcp::secure::*;
 
 let alice_session = Session::random();
 let bob_session = Session::random();
