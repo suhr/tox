@@ -44,7 +44,7 @@ impl NoSpam {
     Two `random()` `NoSpam`s will always be different:
 
     ```
-    use self::tox::toxcore::toxid::NoSpam;
+    use self::tox_core::toxid::NoSpam;
 
     assert_ne!(NoSpam::random(), NoSpam::random());
     ```
@@ -61,7 +61,7 @@ impl NoSpam {
 E.g.:
 
 ```
-use self::tox::toxcore::toxid::NoSpam;
+use self::tox_core::toxid::NoSpam;
 
 assert_eq!(format!("{:X}", NoSpam([0, 0, 0, 0])), "00000000");
 assert_eq!(format!("{:X}", NoSpam([255, 255, 255, 255])), "FFFFFFFF");
@@ -77,7 +77,7 @@ impl fmt::UpperHex for NoSpam {
 /** `Display` should always be the same as `UpperHex`.
 
 ```
-use self::tox::toxcore::toxid::NoSpam;
+use self::tox_core::toxid::NoSpam;
 
 let nospam = NoSpam::random();
 assert_eq!(format!("{}", nospam), format!("{:X}", nospam));
@@ -136,12 +136,12 @@ impl ToxId {
     E.g.
 
     ```
-    use self::tox::toxcore::crypto_core::{
+    use self::tox_core::crypto_core::{
             gen_keypair,
             PublicKey,
             PUBLICKEYBYTES,
     };
-    use self::tox::toxcore::toxid::{NoSpam, NOSPAMBYTES, ToxId};
+    use self::tox_core::toxid::{NoSpam, NOSPAMBYTES, ToxId};
 
     let (pk, _) = gen_keypair();
     let nospam = NoSpam::random();
@@ -172,8 +172,8 @@ impl ToxId {
     E.g.
 
     ```
-    use self::tox::toxcore::crypto_core::gen_keypair;
-    use self::tox::toxcore::toxid::ToxId;
+    use self::tox_core::crypto_core::gen_keypair;
+    use self::tox_core::toxid::ToxId;
 
     let (pk, _) = gen_keypair();
     let _toxid = ToxId::new(pk);
@@ -192,8 +192,8 @@ impl ToxId {
     `checksum` differ:
 
     ```
-    use self::tox::toxcore::crypto_core::gen_keypair;
-    use self::tox::toxcore::toxid::{NoSpam, ToxId};
+    use self::tox_core::crypto_core::gen_keypair;
+    use self::tox_core::toxid::{NoSpam, ToxId};
 
     let (pk, _) = gen_keypair();
     let toxid = ToxId::new(pk);
@@ -248,8 +248,8 @@ impl ToBytes for ToxId {
 E.g.
 
 ```
-use self::tox::toxcore::crypto_core::{PublicKey, PUBLICKEYBYTES};
-use self::tox::toxcore::toxid::{NoSpam, NOSPAMBYTES, ToxId};
+use self::tox_core::crypto_core::{PublicKey, PUBLICKEYBYTES};
+use self::tox_core::toxid::{NoSpam, NOSPAMBYTES, ToxId};
 
 let mut toxid = ToxId::new(PublicKey([0; PUBLICKEYBYTES]));
 toxid.new_nospam(Some(NoSpam([0; NOSPAMBYTES])));
@@ -285,8 +285,8 @@ impl fmt::UpperHex for ToxId {
 E.g.
 
 ```
-use self::tox::toxcore::crypto_core::gen_keypair;
-use self::tox::toxcore::toxid::ToxId;
+use self::tox_core::crypto_core::gen_keypair;
+use self::tox_core::toxid::ToxId;
 
 let (pk, _) = gen_keypair();
 let toxid = ToxId::new(pk);

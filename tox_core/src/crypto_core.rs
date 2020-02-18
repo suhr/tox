@@ -18,7 +18,7 @@ Returns `Ok` on success, `Err` otherwise.
 E.g.
 
 ```
-use ::tox::toxcore::crypto_core::crypto_init;
+use ::tox_core::crypto_core::crypto_init;
 
 crypto_init().unwrap();
 // second call should yield same result
