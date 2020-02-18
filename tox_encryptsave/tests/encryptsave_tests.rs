@@ -1,5 +1,5 @@
 use tox_encryptsave::*;
-use tox_core::toxcore::crypto_core::*;
+use tox_core::crypto_core::*;
 
 #[test]
 fn is_encrypted_test() {

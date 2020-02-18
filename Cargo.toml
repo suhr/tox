@@ -1,5 +1,6 @@
 [workspace]
 members = [
-    "toxcore",
+    "tox_packet",
+    "tox_core",
     "tox_encryptsave"
 ]
