@@ -2,7 +2,7 @@
 E.g.
 
 ```
-use tox::toxencryptsave::*;
+use tox_encryptsave::*;
 
 let plaintext = b"pls no encrypt";
 let password = b"123456";
@@ -43,7 +43,7 @@ pub use sodiumoxide::crypto::pwhash::SALTBYTES as SALT_LENGTH;
 /// Length in bytes of the key used to encrypt/decrypt data.
 pub use sodiumoxide::crypto::box_::PRECOMPUTEDKEYBYTES as KEY_LENGTH;
 
-use crate::toxcore::crypto_core;
+use tox_core::toxcore::crypto_core;
 
 
 /// Length (in bytes) of [`MAGIC_NUMBER`](./constant.MAGIC_NUMBER.html).
@@ -88,7 +88,7 @@ impl PassKey {
     E.g.
 
     ```
-    use self::tox::toxencryptsave::*;
+    use tox_encryptsave::*;
 
     // fails with an empty passphrase
     assert_eq!(PassKey::from_passphrase(&[]), Err(KeyDerivationError::Null));
@@ -114,7 +114,7 @@ impl PassKey {
 
     ```
     use sodiumoxide::crypto::pwhash::gen_salt;
-    use tox::toxencryptsave::*;
+    use tox_encryptsave::*;
 
     assert_eq!(PassKey::with_salt(&[], gen_salt()), Err(KeyDerivationError::Null));
     ```
@@ -157,7 +157,7 @@ impl PassKey {
     E.g.
 
     ```
-    use tox::toxencryptsave::*;
+    use tox_encryptsave::*;
 
                                           // ↓ don't
     let passkey = PassKey::from_passphrase(&[0]).expect("Failed to unwrap PassKey!");
@@ -201,7 +201,7 @@ impl PassKey {
     E.g.
 
     ```
-    use self::tox::toxencryptsave::*;
+    use tox_encryptsave::*;
 
                                           // ↓ don't
     let passkey = PassKey::from_passphrase(&[0]).expect("Failed to unwrap PassKey!");
@@ -251,7 +251,7 @@ memory.
 E.g.
 
 ```
-use self::tox::toxencryptsave::*;
+use tox_encryptsave::*;
 
 // empty data
 assert_eq!(pass_encrypt(&[], &[0]), Err(EncryptionError::Null));
@@ -285,7 +285,7 @@ than encrypted data.
   * `passphrase` is empty
 
 ```
-use self::tox::toxencryptsave::*;
+use tox_encryptsave::*;
 
 // with an empty data
 assert_eq!(pass_decrypt(&[], &[0]), Err(DecryptionError::Null));
@@ -336,7 +336,7 @@ pub fn pass_decrypt(data: &[u8], passphrase: &[u8]) -> Result<Vec<u8>, Decryptio
 E.g.
 
 ```
-use self::tox::toxencryptsave::*;
+use tox_encryptsave::*;
 
 assert_eq!(get_salt(&[]), None);
 ```
