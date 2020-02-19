@@ -2,6 +2,7 @@
 members = [
     "binary_io",
     "tox_crypto",
+    "tox_packet",
     "tox_core",
     "tox_encryptsave"
 ]
