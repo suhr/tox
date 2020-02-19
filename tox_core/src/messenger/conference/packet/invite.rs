@@ -4,7 +4,7 @@
 use nom::number::complete::be_u16;
 
 use super::{ConferenceUID, ConferenceType};
-use crate::binary_io::*;
+use binary_io::*;
 
 /** Invite is a struct that holds info to invite a peer to a conference.
 

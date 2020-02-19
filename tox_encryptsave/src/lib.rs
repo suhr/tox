@@ -43,8 +43,7 @@ pub use sodiumoxide::crypto::pwhash::SALTBYTES as SALT_LENGTH;
 /// Length in bytes of the key used to encrypt/decrypt data.
 pub use sodiumoxide::crypto::box_::PRECOMPUTEDKEYBYTES as KEY_LENGTH;
 
-use tox_core::crypto_core;
-
+use tox_crypto;
 
 /// Length (in bytes) of [`MAGIC_NUMBER`](./constant.MAGIC_NUMBER.html).
 pub const MAGIC_LENGTH: usize = 8;
@@ -174,7 +173,7 @@ impl PassKey {
         output.extend_from_slice(MAGIC_NUMBER);
         output.extend_from_slice(&self.salt.0);
         output.extend_from_slice(&nonce.0);
-        output.append(&mut crypto_core::encrypt_data_symmetric(
+        output.append(&mut tox_crypto::encrypt_data_symmetric(
             &self.key,
             &nonce,
             data
@@ -219,7 +218,7 @@ impl PassKey {
             MAGIC_LENGTH+SALT_LENGTH..MAGIC_LENGTH+SALT_LENGTH+NONCEBYTES
         ]).ok_or(DecryptionError::BadFormat)?;
 
-        let output = crypto_core::decrypt_data_symmetric(
+        let output = tox_crypto::decrypt_data_symmetric(
             &self.key,
             &nonce,
             &data[MAGIC_LENGTH+SALT_LENGTH+NONCEBYTES..]

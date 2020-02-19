@@ -12,7 +12,7 @@ use nom::{
     number::complete::{be_u16, le_u8},
 };
 
-use crate::binary_io::*;
+use binary_io::*;
 
 /// Size of serialized `IpPort` struct.
 pub const SIZE_IPPORT: usize = 19;

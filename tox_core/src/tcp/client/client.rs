@@ -11,7 +11,7 @@ use parking_lot::RwLock;
 use tokio_util::codec::Framed;
 use tokio::net::TcpStream;
 
-use crate::crypto_core::*;
+use tox_crypto::*;
 use crate::onion::packet::InnerOnionResponse;
 use crate::stats::Stats;
 use crate::tcp::codec::{Codec};
@@ -558,6 +558,7 @@ impl Client {
 #[cfg(test)]
 pub mod tests {
     use super::*;
+    use binary_io::*;
 
     use std::time::{Duration, Instant};
     use failure::Error;

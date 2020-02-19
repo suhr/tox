@@ -7,7 +7,7 @@ use std::net::SocketAddr;
 
 use crate::time::*;
 use crate::dht::kbucket::*;
-use crate::crypto_core::*;
+use tox_crypto::*;
 use crate::dht::dht_node::*;
 use crate::dht::packed_node::*;
 use crate::dht::server::hole_punching::*;

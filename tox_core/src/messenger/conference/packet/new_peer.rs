@@ -3,8 +3,8 @@
 
 use nom::number::complete::{be_u16, be_u32};
 
-use crate::binary_io::*;
-use crate::crypto_core::*;
+use binary_io::*;
+use tox_crypto::*;
 
 /** NewPeer is a struct that holds info to send new peer message to a conference.
 

@@ -15,7 +15,7 @@ PK; and additionally used to store nodes closest to friends.
 use std::cmp::{Ord, Ordering};
 use std::convert::{From, Into};
 
-use crate::crypto_core::*;
+use tox_crypto::*;
 use crate::dht::packed_node::*;
 
 /** Calculate the [`k-tree`](../ktree/struct.Ktree.html) index of a PK compared

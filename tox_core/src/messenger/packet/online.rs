@@ -1,7 +1,7 @@
 /*! Online struct
 */
 
-use crate::binary_io::*;
+use binary_io::*;
 
 /** Online is a struct that holds nothing.
 

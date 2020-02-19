@@ -1,7 +1,7 @@
 /*! Top-level Messenger Packets
 */
 
-use crate::binary_io::*;
+use binary_io::*;
 
 mod online;
 mod action;

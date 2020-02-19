@@ -1,7 +1,7 @@
 /*! Alive struct
 */
 
-use crate::binary_io::*;
+use binary_io::*;
 
 /// Id of the ping packet.
 pub const PACKET_ID_ALIVE: u8 = 0x10;

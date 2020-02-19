@@ -35,8 +35,8 @@ pub use self::action::*;
 
 use nom::number::complete::be_u8;
 
-use crate::binary_io::*;
-use crate::crypto_core::*;
+use binary_io::*;
+use tox_crypto::*;
 
 /// Length in bytes of conference unique identifier.
 pub const CONFERENCE_UID_BYTES: usize = 32;

@@ -3,8 +3,8 @@
 
 use nom::number::complete::{le_u8, be_u32, be_u64};
 
-use crate::crypto_core::*;
-use crate::binary_io::*;
+use tox_crypto::*;
+use binary_io::*;
 
 mod file_control;
 mod file_data;

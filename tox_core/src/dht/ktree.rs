@@ -1,6 +1,6 @@
 //! K-buckets structure
 
-use crate::crypto_core::*;
+use tox_crypto::*;
 use crate::dht::dht_node::*;
 use crate::dht::packed_node::*;
 use crate::dht::ip_port::IsGlobal;

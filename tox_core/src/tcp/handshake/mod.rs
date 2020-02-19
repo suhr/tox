@@ -9,8 +9,8 @@ pub mod codec;
 pub use self::packet::*;
 pub use self::codec::*;
 
-use crate::binary_io::*;
-use crate::crypto_core::*;
+use binary_io::*;
+use tox_crypto::*;
 use crate::tcp::secure;
 
 use futures::{self, StreamExt, SinkExt, TryFutureExt};
@@ -173,7 +173,7 @@ pub async fn make_server_handshake(
 mod tests {
     use std::net::SocketAddr;
 
-    use crate::crypto_core::*;
+    use tox_crypto::*;
     use crate::tcp::*;
     use crate::tcp::handshake::*;
 

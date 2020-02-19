@@ -16,7 +16,7 @@ Returns `Ok` on success, `Err` otherwise.
 E.g.
 
 ```
-use tox_crypto:crypto_init;
+use tox_crypto::crypto_init;
 
 crypto_init().unwrap();
 // second call should yield same result

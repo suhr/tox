@@ -9,7 +9,7 @@ use futures::{stream, StreamExt, SinkExt};
 use futures::channel::mpsc;
 use get_if_addrs::IfAddr;
 
-use crate::crypto_core::*;
+use tox_crypto::*;
 use crate::dht::packet::*;
 
 error_kind! {
@@ -159,6 +159,7 @@ impl LanDiscoverySender {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use binary_io::*;
 
     fn broadcast_addrs_count() -> usize {
         get_if_addrs::get_if_addrs().expect("no network interface").iter()

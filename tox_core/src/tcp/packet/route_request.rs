@@ -1,8 +1,8 @@
 /*! RouteRequest packet
 */
 
-use crate::binary_io::*;
-use crate::crypto_core::*;
+use binary_io::*;
+use tox_crypto::*;
 
 /** Sent by client to server.
 Send a routing request to the server that we want to connect

@@ -3,7 +3,7 @@
 
 use nom::number::complete::be_u16;
 
-use crate::binary_io::*;
+use binary_io::*;
 
 /** Query is a struct that holds info to query a peer in a conference.
 

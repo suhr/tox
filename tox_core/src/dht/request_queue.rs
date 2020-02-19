@@ -87,7 +87,7 @@ impl<T> RequestQueue<T> {
 mod tests {
     use super::*;
 
-    use crate::crypto_core::*;
+    use tox_crypto::*;
 
     #[test]
     fn insert_new_ping_id() {

@@ -4,7 +4,7 @@
 use std::str;
 use nom::combinator::rest;
 
-use crate::binary_io::*;
+use binary_io::*;
 
 /// Maximum size in bytes of message string of message packet
 const MAX_MESSAGE_DATA_SIZE: usize = 1372;

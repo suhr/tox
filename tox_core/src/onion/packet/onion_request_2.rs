@@ -5,8 +5,8 @@ use super::*;
 
 use nom::combinator::rest_len;
 
-use crate::binary_io::*;
-use crate::crypto_core::*;
+use binary_io::*;
+use tox_crypto::*;
 use crate::dht::packet::*;
 
 /** Third onion request packet. It's sent from the second to the third node from

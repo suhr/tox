@@ -1,7 +1,7 @@
 /*! Offline struct
 */
 
-use crate::binary_io::*;
+use binary_io::*;
 
 /** Offline is a struct that holds nothing.
 

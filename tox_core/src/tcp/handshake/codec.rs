@@ -1,7 +1,7 @@
 /*! Codecs to deal with ClientHandshake and ServerHandshake in terms of tokio-io
 */
 
-use crate::binary_io::*;
+use binary_io::*;
 use crate::tcp::handshake::packet::*;
 
 use nom::{Err, Offset};
@@ -90,7 +90,7 @@ impl Encoder for ServerHandshakeCodec {
 #[cfg(test)]
 mod tests {
     use crate::tcp::handshake::codec::*;
-    use crate::crypto_core::*;
+    use tox_crypto::*;
     use bytes::BytesMut;
 
     #[test]

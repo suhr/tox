@@ -15,7 +15,7 @@ use tox_core::dht::server::*;
 use tox_core::dht::server_ext::ServerExt;
 use tox_core::dht::lan_discovery::*;
 use tox_core::dht::packed_node::PackedNode;
-use tox_core::crypto_core::*;
+use tox_crypto::*;
 use tox_core::stats::Stats;
 
 

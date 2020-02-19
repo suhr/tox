@@ -2,7 +2,7 @@
 
 use std::collections::VecDeque;
 
-use crate::crypto_core::*;
+use tox_crypto::*;
 use crate::dht::packed_node::PackedNode;
 use crate::onion::client::onion_path::{OnionPath, OnionPathType};
 

@@ -9,7 +9,7 @@ use futures::future;
 use crate::dht::server::*;
 use crate::dht::packed_node::*;
 use crate::state_format::old::*;
-use crate::binary_io::*;
+use binary_io::*;
 use crate::dht::kbucket::*;
 use crate::dht::ktree::*;
 
@@ -94,7 +94,7 @@ impl DaemonState {
 mod tests {
     use super::*;
 
-    use crate::crypto_core::*;
+    use tox_crypto::*;
     use crate::dht::packet::*;
 
     use futures::channel::mpsc;

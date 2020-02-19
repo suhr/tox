@@ -6,7 +6,7 @@ use std::net::SocketAddr;
 
 use failure::Fail;
 
-use crate::crypto_core::*;
+use tox_crypto::*;
 
 error_kind! {
     #[doc = "Error that can happen while processing packets array"]

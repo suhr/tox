@@ -6,7 +6,7 @@ This packet is sent to my friends every time they become online, or whenever my 
 use std::str;
 use nom::combinator::rest;
 
-use crate::binary_io::*;
+use binary_io::*;
 
 /// Maximum size in bytes of status message string
 const MAX_STATUS_MESSAGE_DATA_SIZE: usize = 1007;

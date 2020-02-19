@@ -7,7 +7,7 @@ use nom::{
     combinator::rest,
 };
 
-use crate::binary_io::*;
+use binary_io::*;
 use super::MAX_NAME_LENGTH_IN_CONFERENCE;
 
 /** ChangeName is the struct that holds info to notify changing name of a peer to a conference.

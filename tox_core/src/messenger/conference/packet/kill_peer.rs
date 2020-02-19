@@ -3,7 +3,7 @@
 
 use nom::number::complete::{be_u16, be_u32};
 
-use crate::binary_io::*;
+use binary_io::*;
 
 /** KillPeer is a struct that holds info to send kill peer message to a conference.
 

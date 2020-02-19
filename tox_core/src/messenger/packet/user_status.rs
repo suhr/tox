@@ -3,7 +3,7 @@
 
 use nom::number::complete::le_u8;
 
-use crate::binary_io::*;
+use binary_io::*;
 
 /// Status of user
 #[derive(Clone, Copy, Debug, Eq, PartialEq)]

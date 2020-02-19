@@ -6,7 +6,7 @@ use nom::{
     combinator::rest,
 };
 
-use crate::binary_io::*;
+use binary_io::*;
 
 /** Sent by both client and server, only server will respond.
 When server receives this packet it may respond with the version of the library

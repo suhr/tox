@@ -4,7 +4,7 @@
 use nom::number::complete::be_u16;
 
 use super::{ConferenceUID, ConferenceType};
-use crate::binary_io::*;
+use binary_io::*;
 
 /** InviteResponse is a struct that holds info to response to invite message from a peer.
 

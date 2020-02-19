@@ -7,7 +7,7 @@ use nom::{
     combinator::rest,
 };
 
-use crate::binary_io::*;
+use binary_io::*;
 use super::MAX_NAME_LENGTH_IN_CONFERENCE;
 
 /** Title is a struct that holds info to send a title packet to a conference.

@@ -2,8 +2,8 @@
 
 use std::net::SocketAddr;
 
-use crate::binary_io::*;
-use crate::crypto_core::*;
+use binary_io::*;
+use tox_crypto::*;
 use crate::dht::packed_node::*;
 use crate::ip_port::*;
 use crate::onion::packet::*;

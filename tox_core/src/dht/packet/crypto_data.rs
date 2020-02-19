@@ -8,8 +8,8 @@ use nom::{
 };
 use std::convert::TryInto;
 
-use crate::binary_io::*;
-use crate::crypto_core::*;
+use binary_io::*;
+use tox_crypto::*;
 use crate::dht::packet::errors::*;
 
 /// The maximum size of `CryptoData` packet including two bytes of nonce and

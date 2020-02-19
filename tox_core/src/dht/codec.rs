@@ -4,7 +4,7 @@
 use std::io::Error as IoError;
 
 use crate::dht::packet::*;
-use crate::binary_io::*;
+use binary_io::*;
 use crate::stats::*;
 
 use bytes::BytesMut;
@@ -157,7 +157,7 @@ mod tests {
     use super::*;
     use nom::Needed;
     use crate::onion::packet::*;
-    use crate::crypto_core::*;
+    use tox_crypto::*;
 
     const ONION_RETURN_1_PAYLOAD_SIZE: usize = ONION_RETURN_1_SIZE - secretbox::NONCEBYTES;
     const ONION_RETURN_2_PAYLOAD_SIZE: usize = ONION_RETURN_2_SIZE - secretbox::NONCEBYTES;

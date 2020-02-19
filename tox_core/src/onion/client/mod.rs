@@ -16,7 +16,7 @@ use futures::future::Either;
 use futures::channel::mpsc;
 use parking_lot::Mutex;
 
-use crate::crypto_core::*;
+use tox_crypto::*;
 use crate::dht::ip_port::IsGlobal;
 use crate::dht::packed_node::PackedNode;
 use crate::dht::packet::*;
@@ -956,6 +956,7 @@ impl OnionClient {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use binary_io::*;
 
     impl OnionClient {
         pub fn has_friend(&self, pk: &PublicKey) -> bool {

@@ -1,7 +1,7 @@
 /*! ConnectNotification packet
 */
 
-use crate::binary_io::*;
+use binary_io::*;
 use crate::tcp::connection_id::ConnectionId;
 
 /** Sent by server to client.

@@ -4,8 +4,8 @@
 use nom::number::complete::{be_u8, be_u16};
 use std::str;
 
-use crate::binary_io::*;
-use crate::crypto_core::*;
+use binary_io::*;
+use tox_crypto::*;
 
 /// Length in bytes of nickname in PeerInfo.
 const MAX_NAME_LENGTH_IN_CONFERENCE: usize = 128;

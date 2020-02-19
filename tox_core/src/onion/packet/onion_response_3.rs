@@ -5,7 +5,7 @@ use super::*;
 
 use nom::combinator::rest_len;
 
-use crate::binary_io::*;
+use binary_io::*;
 
 /** Third onion response packet. It's sent back from the destination node to the
 third node from onion chain.

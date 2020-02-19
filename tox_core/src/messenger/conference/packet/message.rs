@@ -7,7 +7,7 @@ use nom::{
     combinator::rest,
 };
 
-use crate::binary_io::*;
+use binary_io::*;
 
 /** Message is the struct that holds info to send chat message to a conference.
 

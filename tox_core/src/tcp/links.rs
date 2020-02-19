@@ -1,7 +1,7 @@
 /*! The implementation of links used by server and clients
 */
 
-use crate::crypto_core::*;
+use tox_crypto::*;
 
 use std::collections::HashMap;
 
@@ -169,7 +169,7 @@ impl Links {
 
 #[cfg(test)]
 mod tests {
-    use crate::crypto_core::*;
+    use tox_crypto::*;
     use crate::tcp::links::*;
 
     #[test]

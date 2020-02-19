@@ -29,8 +29,8 @@ pub use self::onion_response_2::*;
 pub use self::onion_response_3::*;
 pub use self::friend_request::*;
 
-use crate::binary_io::*;
-use crate::crypto_core::*;
+use binary_io::*;
+use tox_crypto::*;
 use crate::dht::packed_node::PackedNode;
 use crate::ip_port::*;
 

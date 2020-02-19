@@ -1,7 +1,7 @@
 /*! The implementation of relay server
 */
 
-use crate::crypto_core::*;
+use tox_crypto::*;
 use crate::onion::packet::InnerOnionResponse;
 use crate::tcp::server::client::Client;
 use crate::tcp::connection_id::ConnectionId;

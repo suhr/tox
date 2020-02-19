@@ -1,7 +1,7 @@
 /*! Common utility functions
 */
 
-use crate::crypto_core::*;
+use tox_crypto::*;
 
 /// Generate non-zero ping_id
 pub fn gen_ping_id() -> u64 {

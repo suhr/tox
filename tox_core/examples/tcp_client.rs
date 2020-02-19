@@ -1,7 +1,7 @@
 #[macro_use]
 extern crate log;
 
-use tox_core::crypto_core::*;
+use tox_crypto::*;
 use tox_core::dht::packet::CryptoData;
 use tox_core::tcp::connection_id::ConnectionId;
 use tox_core::tcp::packet::*;

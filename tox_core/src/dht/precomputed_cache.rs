@@ -5,7 +5,7 @@ use std::sync::Arc;
 use lru::LruCache;
 use parking_lot::Mutex;
 
-use crate::crypto_core::*;
+use tox_crypto::*;
 
 /// LRU cache for `PrecomputedKey`s.
 ///

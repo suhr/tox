@@ -45,7 +45,7 @@ assert_eq!( bob_msg.as_bytes().to_vec(), alice_channel.decrypt(bob_msg_encrypted
 
 */
 
-use crate::crypto_core::*;
+use tox_crypto::*;
 
 use std::cell::RefCell;
 

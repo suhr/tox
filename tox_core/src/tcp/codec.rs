@@ -3,7 +3,7 @@
 
 use std::io::Error as IoError;
 
-use crate::binary_io::*;
+use binary_io::*;
 use crate::tcp::packet::*;
 use crate::tcp::secure::*;
 use crate::stats::*;
@@ -183,7 +183,7 @@ impl Encoder for Codec {
 
 #[cfg(test)]
 mod tests {
-    use crate::crypto_core::*;
+    use tox_crypto::*;
     use crate::dht::packet::CryptoData;
     use crate::onion::packet::*;
     use crate::ip_port::*;
