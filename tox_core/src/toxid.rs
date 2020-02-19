@@ -136,7 +136,7 @@ impl ToxId {
     E.g.
 
     ```
-    use self::tox_core::crypto_core::{
+    use tox_crypto::{
             gen_keypair,
             PublicKey,
             PUBLICKEYBYTES,
@@ -172,7 +172,7 @@ impl ToxId {
     E.g.
 
     ```
-    use self::tox_core::crypto_core::gen_keypair;
+    use tox_crypto::gen_keypair;
     use self::tox_core::toxid::ToxId;
 
     let (pk, _) = gen_keypair();
@@ -192,7 +192,7 @@ impl ToxId {
     `checksum` differ:
 
     ```
-    use self::tox_core::crypto_core::gen_keypair;
+    use tox_crypto::gen_keypair;
     use self::tox_core::toxid::{NoSpam, ToxId};
 
     let (pk, _) = gen_keypair();
@@ -248,7 +248,7 @@ impl ToBytes for ToxId {
 E.g.
 
 ```
-use self::tox_core::crypto_core::{PublicKey, PUBLICKEYBYTES};
+use tox_crypto::{PublicKey, PUBLICKEYBYTES};
 use self::tox_core::toxid::{NoSpam, NOSPAMBYTES, ToxId};
 
 let mut toxid = ToxId::new(PublicKey([0; PUBLICKEYBYTES]));
@@ -285,7 +285,7 @@ impl fmt::UpperHex for ToxId {
 E.g.
 
 ```
-use self::tox_core::crypto_core::gen_keypair;
+use tox_crypto::gen_keypair;
 use self::tox_core::toxid::ToxId;
 
 let (pk, _) = gen_keypair();
