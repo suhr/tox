@@ -1,7 +1,7 @@
 /*! OnionResponse packet
 */
 
-use crate::binary_io::*;
+use binary_io::*;
 use crate::onion::packet::InnerOnionResponse;
 
 /** Sent by server to client.
@@ -50,7 +50,7 @@ mod test {
         OnionResponse {
             payload: InnerOnionResponse::OnionAnnounceResponse(OnionAnnounceResponse {
                 sendback_data: 12345,
-                nonce: gen_nonce(),
+                nonce: tox_crypto::gen_nonce(),
                 payload: vec![42; 123]
             })
         }
@@ -60,8 +60,8 @@ mod test {
         onion_response_with_data_encode_decode,
         OnionResponse {
             payload: InnerOnionResponse::OnionDataResponse(OnionDataResponse {
-                nonce: gen_nonce(),
-                temporary_pk: gen_keypair().0,
+                nonce: tox_crypto::gen_nonce(),
+                temporary_pk: tox_crypto::gen_keypair().0,
                 payload: vec![42; 123]
             })
         }

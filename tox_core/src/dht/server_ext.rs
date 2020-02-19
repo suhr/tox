@@ -102,7 +102,7 @@ mod tests {
     use futures::channel::mpsc;
     use futures::TryStreamExt;
 
-    use crate::crypto_core::*;
+    use tox_crypto::*;
     use crate::dht::packet::*;
 
     #[tokio::test]

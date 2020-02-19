@@ -3,7 +3,7 @@
 
 use nom::number::complete::be_u16;
 
-use crate::binary_io::*;
+use binary_io::*;
 
 /** PeerLeave is a struct that holds info to notify a peer quit a conference.
 

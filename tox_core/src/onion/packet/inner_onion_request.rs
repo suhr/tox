@@ -3,7 +3,7 @@
 
 use super::*;
 
-use crate::binary_io::*;
+use binary_io::*;
 
 /** Onion requests that can be enclosed in onion packets and sent through onion
 path.

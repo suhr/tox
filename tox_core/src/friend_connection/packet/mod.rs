@@ -1,7 +1,7 @@
 /*! Top-level Friend connection Packets
 */
 
-use crate::binary_io::*;
+use binary_io::*;
 
 mod alive;
 mod share_relays;
@@ -62,15 +62,15 @@ mod tests {
         Packet::ShareRelays(ShareRelays::new(vec![
             PackedNode {
                 saddr: "1.1.1.1:33445".parse().unwrap(),
-                pk: gen_keypair().0,
+                pk: tox_crypto::gen_keypair().0,
             },
             PackedNode {
                 saddr: "1.1.1.1:33446".parse().unwrap(),
-                pk: gen_keypair().0,
+                pk: tox_crypto::gen_keypair().0,
             },
             PackedNode {
                 saddr: "1.1.1.1:33447".parse().unwrap(),
-                pk: gen_keypair().0,
+                pk: tox_crypto::gen_keypair().0,
             },
         ]))
     );

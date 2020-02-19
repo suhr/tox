@@ -29,6 +29,9 @@ coveralls = { repository = "tox-rs/tox" }
 maintenance = { status = "actively-developed" }
 
 [dependencies]
+binary_io = { path = "../binary_io" }
+tox_crypto = { path = "../tox_crypto" }
+
 bytes = "0.5"
 futures = { version = "0.3", default-features = false, features = ["std", "async-await"] }
 log = "0.4"

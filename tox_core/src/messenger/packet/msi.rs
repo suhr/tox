@@ -8,7 +8,7 @@ use nom::{
 };
 use bitflags::*;
 
-use crate::binary_io::*;
+use binary_io::*;
 
 /// Maximum size in bytes of msi message packet
 const MAX_MSI_PAYLOAD_SIZE: usize = 256;

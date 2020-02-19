@@ -2,7 +2,7 @@
 
 use std::num::NonZeroU8;
 
-use crate::binary_io::*;
+use binary_io::*;
 use crate::tcp::links::MAX_LINKS_N;
 
 use nom::number::streaming::be_u8;

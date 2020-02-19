@@ -7,6 +7,7 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+tox_crypto = { path = "../tox_crypto" }
 tox_core = { path = "../tox_core" }
 sodiumoxide = "*"
 failure = "*"

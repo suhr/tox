@@ -4,7 +4,7 @@
 use std::str;
 use nom::combinator::rest;
 
-use crate::binary_io::*;
+use binary_io::*;
 
 /// Maximum size in bytes of nickname string of nickname packet
 const MAX_NICKNAME_DATA_SIZE: usize = 128;

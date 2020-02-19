@@ -3,8 +3,8 @@ handshake using [`diagram`](https://zetok.github.io/tox-spec/#handshake-diagram)
 
 */
 
-use crate::binary_io::*;
-use crate::crypto_core::*;
+use binary_io::*;
+use tox_crypto::*;
 
 /** The request of the client to create a TCP handshake.
 

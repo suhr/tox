@@ -1,8 +1,8 @@
 /*! OnionRequest packet
 */
 
-use crate::binary_io::*;
-use crate::crypto_core::*;
+use binary_io::*;
+use tox_crypto::*;
 use crate::ip_port::*;
 use crate::onion::packet::{
     ONION_MAX_PACKET_SIZE,

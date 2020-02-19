@@ -1,8 +1,8 @@
 /*! LanDiscovery packet
 */
 
-use crate::binary_io::*;
-use crate::crypto_core::*;
+use binary_io::*;
+use tox_crypto::*;
 
 /** LanDiscovery packet struct.
 LanDiscovery packets contain the DHT public key of the sender. When a LanDiscovery packet

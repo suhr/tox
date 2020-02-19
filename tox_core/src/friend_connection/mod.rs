@@ -16,8 +16,8 @@ use futures::future::Either;
 use futures::channel::mpsc;
 use parking_lot::RwLock;
 
-use crate::binary_io::*;
-use crate::crypto_core::*;
+use binary_io::*;
+use tox_crypto::*;
 use crate::dht::dht_node::BAD_NODE_TIMEOUT;
 use crate::dht::packed_node::PackedNode;
 use crate::dht::server::{Server as DhtServer};

@@ -3,8 +3,8 @@
 
 use nom::number::complete::be_u64;
 
-use crate::binary_io::*;
-use crate::crypto_core::*;
+use binary_io::*;
+use tox_crypto::*;
 use crate::dht::packet::errors::*;
 
 /** CookieRequest packet struct.

@@ -22,7 +22,7 @@ use futures::{future, Future, FutureExt, TryFutureExt, StreamExt};
 use futures::future::Either;
 use futures::channel::mpsc;
 
-use crate::crypto_core::*;
+use tox_crypto::*;
 use crate::dht::packed_node::PackedNode;
 use crate::tcp::client::client::*;
 use crate::tcp::packet::*;
@@ -410,6 +410,7 @@ impl Connections {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use binary_io::*;
 
     use crate::dht::packet::CryptoData;
     use crate::ip_port::*;

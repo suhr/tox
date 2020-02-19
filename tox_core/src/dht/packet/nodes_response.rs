@@ -6,8 +6,8 @@ use nom::{
     combinator::rest,
 };
 
-use crate::binary_io::*;
-use crate::crypto_core::*;
+use binary_io::*;
+use tox_crypto::*;
 use crate::dht::packed_node::PackedNode;
 use crate::dht::codec::*;
 use crate::dht::packet::errors::*;

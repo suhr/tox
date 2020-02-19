@@ -19,7 +19,7 @@ use std::time::{Duration, Instant};
 use std::{iter, mem};
 
 use crate::time::*;
-use crate::crypto_core::*;
+use tox_crypto::*;
 use crate::dht::packet::*;
 use crate::dht::packed_node::*;
 use crate::dht::kbucket::*;
@@ -1569,6 +1569,7 @@ impl Server {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use binary_io::*;
 
     use std::net::SocketAddr;
 

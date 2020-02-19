@@ -5,8 +5,8 @@ use std::io::{ErrorKind, Error};
 use std::net::{IpAddr, SocketAddr};
 use std::time::{Duration, Instant, SystemTime};
 
-use crate::binary_io::*;
-use crate::crypto_core::*;
+use binary_io::*;
+use tox_crypto::*;
 use crate::time::*;
 use crate::onion::packet::*;
 use crate::dht::kbucket::Distance;

@@ -33,7 +33,7 @@ pub use self::crypto_data::*;
 pub use self::cookie::*;
 pub use self::errors::*;
 
-use crate::binary_io::*;
+use binary_io::*;
 use crate::onion::packet::*;
 
 /** DHT packet enum that encapsulates all types of DHT packets.

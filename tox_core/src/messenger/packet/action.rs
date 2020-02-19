@@ -4,7 +4,7 @@
 use std::str;
 use nom::combinator::rest;
 
-use crate::binary_io::*;
+use binary_io::*;
 
 /// Maximum size in bytes of action message string of action packet
 const MAX_ACTION_MESSAGE_DATA_SIZE: usize = 1372;

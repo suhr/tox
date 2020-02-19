@@ -1,7 +1,7 @@
 /*! Data packet
 */
 
-use crate::binary_io::*;
+use binary_io::*;
 use crate::dht::packet::{CookieRequest, CookieResponse, CryptoHandshake, CryptoData};
 use crate::tcp::connection_id::ConnectionId;
 

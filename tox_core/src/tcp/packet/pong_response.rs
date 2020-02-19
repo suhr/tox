@@ -1,7 +1,7 @@
 /*! PongResponse packet
 */
 
-use crate::binary_io::*;
+use binary_io::*;
 
 use nom::number::streaming::be_u64;
 

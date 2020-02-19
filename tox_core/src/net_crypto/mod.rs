@@ -32,8 +32,8 @@ use futures::channel::mpsc;
 use parking_lot::RwLock;
 use futures::future::FutureExt;
 
-use crate::binary_io::*;
-use crate::crypto_core::*;
+use binary_io::*;
+use tox_crypto::*;
 use crate::dht::packet::{Packet as DhtPacket, *};
 use crate::dht::precomputed_cache::*;
 use crate::io_tokio::*;

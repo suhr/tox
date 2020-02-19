@@ -15,7 +15,7 @@ use tokio_util::codec::Framed;
 use tokio::time::{Error as TimerError};
 // use tokio_timer::timeout::{Error as TimeoutError};
 
-use crate::crypto_core::*;
+use tox_crypto::*;
 use crate::tcp::codec::{DecodeError, EncodeError, Codec};
 use crate::tcp::handshake::make_server_handshake;
 use crate::tcp::server::{Client, Server};
@@ -270,6 +270,7 @@ impl ServerExt for Server {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use binary_io::*;
 
     use failure::Error;
 

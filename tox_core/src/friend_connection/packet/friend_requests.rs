@@ -3,9 +3,9 @@
 
 use nom::combinator::rest;
 
-use crate::binary_io::*;
+use binary_io::*;
 use crate::onion::packet::*;
-use crate::crypto_core::*;
+use tox_crypto::*;
 use crate::ip_port::SIZE_IPPORT;
 use crate::toxid::NoSpam;
 

@@ -1,7 +1,7 @@
 /*! The inner implementation of client used only by relay server.
 */
 
-use crate::crypto_core::*;
+use tox_crypto::*;
 use crate::tcp::packet::*;
 use crate::tcp::connection_id::ConnectionId;
 use crate::tcp::links::Links;

@@ -1,6 +1,6 @@
 use std::time::{Duration, Instant};
 
-use crate::crypto_core::*;
+use tox_crypto::*;
 use crate::dht::packed_node::PackedNode;
 use crate::dht::server::{Server as DhtServer};
 use crate::onion::client::nodes_pool::*;

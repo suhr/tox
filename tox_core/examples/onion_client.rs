@@ -15,7 +15,7 @@ use tox_core::dht::ip_port::IsGlobal;
 use tox_core::dht::packet::*;
 use tox_core::dht::server::Server;
 use tox_core::dht::packed_node::PackedNode;
-use tox_core::crypto_core::*;
+use tox_crypto::*;
 use tox_core::onion::client::*;
 use tox_core::tcp::client::Connections;
 use tox_core::stats::Stats;
@@ -47,7 +47,7 @@ async fn main_task(
     local_addr: SocketAddr,
     onion_client: OnionClient,
     mut net_rx: mpsc::Receiver<(tox_core::dht::packet::Packet, SocketAddr)>,
-    dht_pk_rx: mpsc::UnboundedReceiver<(PublicKey, tox_core::crypto_core::curve25519xsalsa20poly1305::PublicKey)>,
+    dht_pk_rx: mpsc::UnboundedReceiver<(PublicKey, tox_crypto::curve25519xsalsa20poly1305::PublicKey)>,
 ) {
     let is_ipv4 = local_addr.is_ipv4();
     let socket = common::bind_socket(local_addr).await;

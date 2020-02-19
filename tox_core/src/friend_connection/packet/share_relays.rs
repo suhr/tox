@@ -1,7 +1,7 @@
 /*! ShareRalays struct
 */
 
-use crate::binary_io::*;
+use binary_io::*;
 use crate::dht::packed_node::*;
 
 /// Id of the `ShareRelays` packet.
@@ -65,15 +65,15 @@ mod tests {
         ShareRelays::new(vec![
             PackedNode {
                 saddr: "1.1.1.1:33445".parse().unwrap(),
-                pk: gen_keypair().0,
+                pk: tox_crypto::gen_keypair().0,
             },
             PackedNode {
                 saddr: "1.1.1.1:33446".parse().unwrap(),
-                pk: gen_keypair().0,
+                pk: tox_crypto::gen_keypair().0,
             },
             PackedNode {
                 saddr: "1.1.1.1:33447".parse().unwrap(),
-                pk: gen_keypair().0,
+                pk: tox_crypto::gen_keypair().0,
             },
         ])
     );

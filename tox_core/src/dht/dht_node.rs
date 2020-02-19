@@ -9,7 +9,7 @@ Here, GOOD node is the node responded within 162 seconds, BAD node is the node n
 use std::net::{SocketAddr, SocketAddrV4, SocketAddrV6};
 use std::time::{Duration, Instant};
 
-use crate::crypto_core::*;
+use tox_crypto::*;
 use crate::dht::kbucket::*;
 use crate::dht::packed_node::*;
 use crate::time::*;

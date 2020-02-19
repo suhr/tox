@@ -26,7 +26,7 @@ pub use self::onion_request::OnionRequest;
 pub use self::onion_response::OnionResponse;
 pub use self::data::{Data, DataPayload};
 
-use crate::binary_io::*;
+use binary_io::*;
 
 use nom::number::streaming::be_u16;
 

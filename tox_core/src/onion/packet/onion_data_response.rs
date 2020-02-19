@@ -3,8 +3,8 @@
 
 use super::*;
 
-use crate::binary_io::*;
-use crate::crypto_core::*;
+use binary_io::*;
+use tox_crypto::*;
 use crate::dht::packet::*;
 use crate::friend_connection::packet::MAX_ONION_CLIENT_DATA_SIZE;
 

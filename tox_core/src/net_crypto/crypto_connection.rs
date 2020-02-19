@@ -7,7 +7,7 @@ use std::time::{Duration, Instant};
 use super::packets_array::*;
 
 use crate::dht::ip_port::IsGlobal;
-use crate::crypto_core::*;
+use tox_crypto::*;
 use crate::dht::packet::*;
 use crate::time::*;
 

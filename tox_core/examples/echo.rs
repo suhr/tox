@@ -10,12 +10,12 @@ use failure::{err_msg, Error};
 
 use std::net::SocketAddr;
 
-use tox_core::binary_io::*;
+use binary_io::*;
 use tox_core::dht::server::Server;
 use tox_core::dht::server_ext::ServerExt;
 use tox_core::dht::packed_node::PackedNode;
 use tox_core::dht::lan_discovery::LanDiscoverySender;
-use tox_core::crypto_core::*;
+use tox_crypto::*;
 use tox_core::friend_connection::FriendConnections;
 use tox_core::friend_connection::packet::*;
 use tox_core::net_crypto::{NetCrypto, NetCryptoNewArgs};

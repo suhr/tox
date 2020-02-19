@@ -134,6 +134,56 @@ impl FromBytes for sha512::Digest {
     named!(from_bytes<sha512::Digest>, map_opt!(take!(sha512::DIGESTBYTES), sha512::Digest::from_slice));
 }
 
+/** Create test that encodes/decodes specified value and checks that result
+equals original value. Type of this value should implement `ToBytes`,
+`FromBytes`, `Clone`, `Eq` traits.
+*/
+#[macro_export]
+macro_rules! encode_decode_test (
+    ($test:ident, $value:expr) => (
+        #[test]
+        fn $test() {
+            ::sodiumoxide::init().unwrap();
+
+            let value = $value;
+            let mut buf = [0; 1024 * 1024];
+            let (_, size) = value.to_bytes((&mut buf, 0)).unwrap();
+            assert!(size <= 1024 * 1024);
+            let (rest, decoded_value) = FromBytes::from_bytes(&buf[..size]).unwrap();
+            // this helps compiler to infer type of decoded_value
+            // i.e. it means that decoded_value has the same type as value
+            fn infer<T>(_: &T, _: &T) { }
+            infer(&decoded_value, &value);
+            assert!(rest.is_empty());
+            assert_eq!(decoded_value, value);
+        }
+    )
+);
+
+/// Extract inner content of enums.
+#[macro_export]
+macro_rules! unpack {
+    ($variable:expr, $variant:path, $name:ident) => (
+        unpack!($variable, $variant { $name })
+    );
+    ($variable:expr, $variant:path) => {
+        unpack!($variable, $variant[inner])
+    };
+    ($variable:expr, $variant:path [ $($inner:ident),* ]) => (
+        match $variable {
+            $variant( $($inner),* ) => ( $($inner),* ),
+            other => panic!("Expected {} but got {:?}", stringify!($variant), other),
+        }
+    );
+    ($variable:expr, $variant:path { $($inner:ident),* }) => (
+        match $variable {
+            $variant { $($inner,)* .. } => ( $($inner),* ),
+            other => panic!("Expected {} but got {:?}", stringify!($variant), other),
+        }
+    );
+}
+
+
 #[cfg(test)]
 mod tests {
     use super::*;
